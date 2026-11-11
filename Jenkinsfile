@@ -28,13 +28,13 @@ pipeline{
         stage('Build JAR files'){
             steps{
                 echo "Build"
-                bat 'jar cfm factorial.jar manifest.txt Factorial.class'
+                bat 'jar -cfm Factorial.jar manifest.txt Factorial.class'
             }
         }
         stage('Archive JAR files'){
             steps{
                 echo "Archive jar files"
-                archiveArtifacts artifacts: 'factorial.jar'
+                archiveArtifacts artifacts: 'Factorial.jar'
             }
         }
     }
