@@ -4,7 +4,7 @@ pipeline{
         stage('Checkout'){
             steps{
                 echo "Cloning the repo"
-                git branch: 'main', url: 'https://github.com/HanishaS28/week-5.git'
+                git branch: 'main', url: 'https://github.com/Hanisha8199/sample.git'
             }
         }
         stage('Compile'){
